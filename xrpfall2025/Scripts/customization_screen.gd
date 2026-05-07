@@ -28,16 +28,21 @@ func _process(_delta):
 		
 # Works for all the buttons being pressed instead of one at a time
 func _on_car_pressed(color: Color) -> void:
-	selected_color = color
-	print("Selected color:", selected_color)
-	save_customization()
-	
-	pass # Replace with function body.
+#	selected_color = color
+#	print("Selected color:", selected_color)
+#	save_customization()
+	pass
 		
 		# Maybe the logic will be an enum of states in player for the cars, 
 		# and car.name is compared to the state name then sets the car
 		# I have to figure out when it will be reset, if it even needs to be reset
 		
+
+func _on_file_select_pressed() -> void:
+	var fileDialog = $MapOptions/FileDialog
+	fileDialog.popup_centered_clamped()
+	
+	var path = await fileDialog.file_selected
 	
 
 # Trying to save the selected choice into a file so it can be read in player

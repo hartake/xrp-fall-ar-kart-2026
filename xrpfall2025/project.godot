@@ -18,6 +18,7 @@ config/icon="res://Assets/Images/icon.svg"
 [autoload]
 
 NetworkReceiver="*res://Scripts/NetworkReceiver.gd"
+LevelData="*res://Scripts/level_data.gd"
 
 [debug_draw_3d]
 

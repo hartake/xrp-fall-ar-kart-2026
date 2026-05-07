@@ -25,6 +25,7 @@ public partial class SceneManager : Node
 		Finishline finishlineFL = (Finishline)finishline;
 		CheckpointManager checkpointManagerCM = (CheckpointManager)checkpointManager;
 		
+		
 		//initialize everyone
 		killPlaneKP.Init(carManagerCM.Cars);
 		
@@ -34,7 +35,6 @@ public partial class SceneManager : Node
 		//GD.Print(cp);
 		var sp = track_loader.Get("startingPoint").As<Vector3>();
 		var ip = track_loader.Get("innerPath").As<Path3D>();
-		
 		
 		//checkpointManagerCM.SpawnCheckpoints(trackT.Checkpoints);
 		checkpointManagerCM.SpawnCheckpoints(cp);
@@ -61,6 +61,7 @@ public partial class SceneManager : Node
 			finishlineFL.OnCrossingEvent += c.IncrementLap;
 			finishlineFL.OnCrossingEvent += c.ClearCheckpoints;
 		}
+		GetNode<Control>("CanvasLayer/HUD").Call("start_countdown");
 	}
 
 }

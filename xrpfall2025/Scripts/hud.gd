@@ -53,7 +53,7 @@ var stopwatch_running: bool = false
 func _ready():
 	# When I want it to start at the beginning of the race instead I would add
 	# $HUD.start_countdown() to scene manager script instead
-	start_countdown() 
+	#start_countdown() 
 	connect("countdown_finished", Callable(self, "_on_countdown_finished"))
 
 	

@@ -121,7 +121,6 @@ dialog_hide_on_ok = true
 
 [node name="RootPart" parent="Track" instance=ExtResource("2_dthog")]
 unique_name_in_owner = true
-placed = true
 
 [node name="Straight Road Model" parent="Track/RootPart" index="0"]
 material_override = SubResource("StandardMaterial3D_i2bqm")

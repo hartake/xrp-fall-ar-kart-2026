@@ -1,30 +1,15 @@
 extends Node3D
 
-@export var placed = false
-#@export var snap_point : Node3D
 @export var base_rotation : Vector3
 
 @export var next_piece : Node = null
 @export var previous_piece : Node = null
 
 func _ready() -> void:
-	if !placed:
-		pass
-	#	disable_points()
-	base_rotation = rotation
+	base_rotation = rotation # point to reset to when not hovering on snap point
 
 func _process(delta: float)  -> void:
 	pass
-	# figure out a rotation calculation
-
-# probably not necessary (makes no checks on placed) but convenient for now
-func place():
-	placed = true
-	enable_points()
-
-func _unplace() -> void:
-	placed = false
-	disable_points()
 
 func disable_points():
 	$"Snap Point 1".process_mode = Node.PROCESS_MODE_DISABLED
