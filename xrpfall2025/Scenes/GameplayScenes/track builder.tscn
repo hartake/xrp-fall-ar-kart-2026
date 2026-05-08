@@ -94,7 +94,8 @@ Right click to pan
 F to flip piece
 D to delete piece
 S to save
-Red piece is \"Root\" and cannot be deleted"
+Q to return to main menu
+Red piece is \"Root\" and cannot be moved or deleted"
 label_settings = SubResource("LabelSettings_i2bqm")
 
 [node name="Backdrop" type="StaticBody3D" parent="."]

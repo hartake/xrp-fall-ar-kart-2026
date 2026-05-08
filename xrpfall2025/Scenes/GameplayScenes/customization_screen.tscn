@@ -153,6 +153,7 @@ icon = ExtResource("8_qqu8f")
 expand_icon = true
 
 [node name="Map3" type="Button" parent="MapOptions"]
+visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme = ExtResource("1_upek8")

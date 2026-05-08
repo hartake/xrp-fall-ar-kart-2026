@@ -115,7 +115,7 @@ public partial class Item : Node
 					//if (OnItemCollision != null) OnItemCollision();
 
 					// Get car's forward direction from its CharacterBody3D
-					var body = c.GetNode<CharacterBody3D>("Node3D/Player") ?? c.GetNode<CharacterBody3D>("Node3D/CharacterBody3D");
+					var body = c.GetNodeOrNull<CharacterBody3D>("Node3D/Player") ?? c.GetNode<CharacterBody3D>("Node3D/CharacterBody3D");
 					if (body != null)
 						lastHitDirection = -body.GlobalTransform.Basis.Z.Normalized();
 					else

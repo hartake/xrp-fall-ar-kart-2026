@@ -21,7 +21,7 @@ func _input(event: InputEvent) -> void:
 			# did try and use scale * -1 but it interacted weirdly with rotations
 		# delete, but only if not root part
 		elif event.keycode == KEY_D and event.pressed and dragging:
-			if drag_object != %RootPart:
+			if drag_object != %RootPart: # potentially redundant
 				drag_object.queue_free()
 				drag_object = null
 				dragging = false
@@ -33,6 +33,9 @@ func _input(event: InputEvent) -> void:
 		# generate path (for debug)
 		elif event.keycode == KEY_G and event.pressed:
 			generate_path()
+		elif event.keycode == KEY_Q and event.pressed:
+			get_tree().change_scene_to_file("res://Scenes/GameplayScenes/title_screen.tscn")
+			pass
 	elif event is InputEventMouseButton:
 		# pan camera
 		# note: is limited by the $Backdrop plane, as it finds location by casting to that
@@ -56,7 +59,9 @@ func _input(event: InputEvent) -> void:
 				if collider == null:
 					return
 				drag_object = collider.get_parent()
-				print(drag_object)
+				if drag_object == %RootPart:
+					drag_object = null
+					return
 				dragging = true
 				drag_object.disable_points()
 			elif event.pressed == true and dragging == true: # being held

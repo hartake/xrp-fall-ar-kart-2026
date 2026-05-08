@@ -98,7 +98,8 @@ public partial class CarManager : Node
 	public void Init(Vector3 startingPosition, Path3D track, int totalCheckpoints)
 	{
 		numberOfEnemies = TOTALCARS - numberOfPlayers;
-		Vector3 spawnDisplacement = new Vector3(4, 2, -4);
+		//Vector3 spawnDisplacement = new Vector3(4, 2, -4); // generated tracks
+		Vector3 spawnDisplacement = new Vector3(0, 2, 0); // loaded custom tracks
 		//spawn all enemies
 		for(int i = 0; i < numberOfEnemies; i++)
 		{
