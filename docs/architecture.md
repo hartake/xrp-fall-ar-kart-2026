@@ -22,7 +22,7 @@ Godot owns the game UI and runtime. Separate PC-side vision scripts process came
 
 The configured main scene is the title screen. The track editor assembles road-piece scenes and saves a `.tscn`; gameplay obtains its selected track from `LevelData`.
 
-![Startup and track flow: project entry, menu routes, and track authoring](images/3_core_game.png)
+![Startup and track flow: project entry, menu routes, and track authoring](images/3_startup_track_game.png)
 
 The saved track and the gameplay-selected track are separate in the current code: the editor saves a `.tscn`, while `LevelData` currently defaults to `basic_track.tscn`.
 
