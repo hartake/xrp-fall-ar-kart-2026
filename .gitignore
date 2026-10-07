@@ -30,3 +30,8 @@ __pycache__/
 *.pyc
 xrpfall2025/apriltag_detector
 xrpfall2025/laptop_fusion
+
+# Repomix - Local helper files. TODO: Omit from merge.
+.repomixignore
+repomix-output.*
+xrpfall2025/addons

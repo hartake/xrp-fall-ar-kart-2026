@@ -38,53 +38,11 @@ color = Color(0.216, 0.219067, 0.4, 1)
 layout_mode = 0
 offset_left = -9.0
 offset_top = -80.0
-offset_right = 1351.0
-offset_bottom = 747.0
+offset_right = 2422.0
+offset_bottom = 1275.0
 texture = ExtResource("3_mntij")
 expand_mode = 1
 stretch_mode = 4
-
-[node name="ColorBoxLeft" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -1114.0
-offset_top = -205.0
-offset_right = -587.0
-offset_bottom = 188.0
-grow_horizontal = 0
-grow_vertical = 2
-color = Color(0.104904, 0.124858, 0.295305, 0.823529)
-
-[node name="TitleBoxLeft" type="ColorRect" parent="ColorBoxLeft"]
-layout_mode = 0
-offset_right = 528.0
-offset_bottom = 59.0
-color = Color(0.108, 0.1272, 0.3, 1)
-
-[node name="ColorBoxRight" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -565.0
-offset_top = -205.0
-offset_right = -23.0
-offset_bottom = 188.0
-grow_horizontal = 0
-grow_vertical = 2
-color = Color(0.21, 0.1155, 0.123375, 0.823529)
-
-[node name="TitleBoxRight" type="ColorRect" parent="ColorBoxRight"]
-layout_mode = 0
-offset_right = 540.0
-offset_bottom = 59.0
-color = Color(0.21, 0.1155, 0.123375, 1)
 
 [node name="CarOptions" type="HBoxContainer" parent="."]
 layout_mode = 0
@@ -169,7 +127,7 @@ offset_bottom = 96.0
 grow_horizontal = 2
 theme = ExtResource("12_q5g2k")
 theme_override_font_sizes/font_size = 60
-text = "Customization"
+text = "Get Ready..."
 
 [node name="MapText" type="Label" parent="."]
 layout_mode = 0
@@ -200,14 +158,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -91.5
-offset_top = -108.0
-offset_right = 91.5
-offset_bottom = -24.0
+offset_left = -91.0
+offset_top = -245.0
+offset_right = 92.0
+offset_bottom = -161.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("1_upek8")
-text = "Confirm"
+text = "Go!"
 icon = ExtResource("14_wqq3l")
 clip_text = true
 icon_alignment = 1

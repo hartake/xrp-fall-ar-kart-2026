@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmeufvqsj8ocv"]
+[gd_scene load_steps=7 format=3 uid="uid://bmeufvqsj8ocv"]
 
 [ext_resource type="Script" uid="uid://bcs5fr58pstg" path="res://Scripts/title_screen.gd" id="1_4wxs3"]
 [ext_resource type="Theme" uid="uid://fkat5bpgiklk" path="res://ScreenMainTheme.tres" id="1_4375q"]
 [ext_resource type="Texture2D" uid="uid://bfkjk87oq7wdr" path="res://Assets/Images/bluebutton.png" id="3_1cpuo"]
 [ext_resource type="Texture2D" uid="uid://b2uxgsac21jo3" path="res://Assets/Images/BackgroundExample.png" id="3_c6lua"]
 [ext_resource type="StyleBox" uid="uid://blm332pcbh3n3" path="res://UI/buttonstyle.tres" id="3_t0dsj"]
-[ext_resource type="Texture2D" uid="uid://b0v2u3opifjud" path="res://Assets/Images/XRPLogoClear.png" id="5_0b5b0"]
 [ext_resource type="Texture2D" uid="uid://cktqdgaqpn1yy" path="res://Assets/Images/MockLogo.png" id="6_0b5b0"]
 
 [node name="TitleScreen" type="Control"]
@@ -57,19 +56,6 @@ texture = ExtResource("6_0b5b0")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Logo" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 360.0
-offset_top = 556.0
-offset_right = 566.0
-offset_bottom = 647.876
-grow_horizontal = 2
-texture = ExtResource("5_0b5b0")
-expand_mode = 5
-
 [node name="StartButton" type="Button" parent="."]
 process_mode = 3
 layout_mode = 1
@@ -107,7 +93,7 @@ clip_text = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Track Editor" type="Button" parent="."]
+[node name="Track Builder" type="Button" parent="."]
 process_mode = 3
 layout_mode = 1
 anchors_preset = 5
@@ -119,7 +105,7 @@ offset_right = 111.0
 offset_bottom = 716.0
 grow_horizontal = 2
 theme_override_styles/normal = ExtResource("3_t0dsj")
-text = "Track Editor"
+text = "Track Builder"
 icon = ExtResource("3_1cpuo")
 clip_text = true
 icon_alignment = 1
@@ -127,4 +113,4 @@ expand_icon = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Quickstart" to="." method="_on_quickstart_pressed"]
-[connection signal="pressed" from="Track Editor" to="." method="_on_track_editor_pressed"]
+[connection signal="pressed" from="Track Builder" to="." method="_on_track_editor_pressed"]
