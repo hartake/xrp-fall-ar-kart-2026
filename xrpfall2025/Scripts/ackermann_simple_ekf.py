@@ -1,4 +1,7 @@
-import time, math, network, socket, json
+# Pure math module, imported by laptop_fusion.py. It does no networking.
+# (It used to import MicroPython's `network`, which doesn't exist on the
+#  laptop and makes `import` fail there.)
+import math
 import numpy as np
 
 class ackermann_simple_ekf:
@@ -108,9 +111,12 @@ class ackermann_simple_ekf:
     def camera_correction(self, x_pred, y_pred, th_pred, AprilTag_x, AprilTag_z, AprilTag_th):
         innov = self.wrap_pi(AprilTag_th - self._theta)
 
-        z_matrix = np.array([[AprilTag_x, 0, 0],
-                             [0, AprilTag_z, 0],
-                             [0, 0, 0]])
+        # Measurement as a column vector [x, y, (theta unused)]. This was a
+        # 3x3 diagonal matrix, which numpy broadcast so the y correction
+        # used the wrong column: y was pulled toward 0, not the tag's y.
+        z_matrix = np.array([[AprilTag_x],
+                             [AprilTag_z],
+                             [0.0]])
 
         camera_Q = np.array([[0.001, 0, 0],
                     [0, 0.001, 0],
@@ -136,9 +142,8 @@ class ackermann_simple_ekf:
 
         self._Epsilon = (identity_3 - camera_K@camera_C)@self._Epsilon
         
-        self._x = state[0][0]
-        self._y = state[1][0]
-        self._theta = state[2][0]
+        self._x = float(state[0][0])
+        self._y = float(state[1][0])
+        self._theta = self.wrap_pi(float(state[2][0]))
 
         return self._x, self._y, self._theta
-        
