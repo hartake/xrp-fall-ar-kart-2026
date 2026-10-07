@@ -23,3 +23,5 @@ venv/
 
 road_models.blend
 xrpfall2025/export/
+Scripts/build/
+Scripts/dist/
