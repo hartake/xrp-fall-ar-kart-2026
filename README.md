@@ -18,3 +18,6 @@ This repo contains the code to the racing game that will be integrated with an X
 ### Technical
 - Engine: Godot
 - Languages: C# and GDScript
+
+### Architecture
+See [docs/architecture.md](docs/architecture.md) for diagrams of the system components, core gameplay logic, and startup/track flow.

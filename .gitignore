@@ -23,3 +23,8 @@ venv/
 
 road_models.blend
 xrpfall2025/export/
+
+# Repomix
+.repomixignore
+repomix-output.*
+xrpfall2025/addons
