@@ -25,3 +25,8 @@ road_models.blend
 xrpfall2025/export/
 xrpfall2025/Scripts/build/
 xrpfall2025/Scripts/dist/
+
+__pycache__/
+*.pyc
+xrpfall2025/apriltag_detector
+xrpfall2025/laptop_fusion
